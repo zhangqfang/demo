@@ -26,7 +26,8 @@ public class User {
     @ApiModelProperty(notes = "用户邮箱")
     private String email;
     @ApiModelProperty(notes = "用户性别")
-    private Integer sex;
+    private Integer six;
+
 
 
 }
