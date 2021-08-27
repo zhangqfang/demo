@@ -17,6 +17,7 @@ public class SwaggerConfiguration {
 
    @Bean
    public Docket buildDocket() {
+      //获取项目环境
       return new Docket(DocumentationType.SWAGGER_2)
               .apiInfo(buildApiInfo())
               .select()
@@ -30,7 +31,7 @@ public class SwaggerConfiguration {
       Contact contact = new Contact("张前芳","https://mvnrepository.com/artifact/io.springfox/springfox-swagger2/2.9.2","1967252394@qq.com");
       return new ApiInfoBuilder()
               .title("Gradle依赖管理")
-              .description("测试gradle")
+              .description("测试gradle")//描述
               .contact(contact)
               .version("1.0.0").build();
    }
