@@ -24,7 +24,7 @@ public class SwaggerConfiguration {
               // 要扫描的API(Controller)基础包
               .apis(RequestHandlerSelectors.basePackage("com.nanfang"))
               .paths(PathSelectors.any())
-              .build();
+              .build().groupName("第一组");
    }
 
    private ApiInfo buildApiInfo() {
@@ -34,5 +34,11 @@ public class SwaggerConfiguration {
               .description("测试gradle")//描述
               .contact(contact)
               .version("1.0.0").build();
+   }
+
+  @Bean
+   public Docket docket(){
+      Docket docket = new Docket(DocumentationType.SWAGGER_2);
+      return docket.groupName("第二组");
    }
 }

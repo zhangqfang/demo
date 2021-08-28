@@ -13,13 +13,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/user")
-@Api(value = "Gradle测试",tags = "项目练习",description = "频道管理")
+@Api(value = "Gradle测试",tags = "项目练习")
 public class GradleController {
     @Autowired
     private GrodleService grodleService;
 
     @GetMapping("/findAll")
-    @ApiOperation(value = "查询全部用户")
+    @ApiOperation(value = "findAll",tags = "查询全部用户")
     public List<User> findAll() {
         return grodleService.findAll();
     }
