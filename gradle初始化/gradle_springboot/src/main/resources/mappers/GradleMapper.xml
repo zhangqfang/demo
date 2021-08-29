@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nanfang.gradle_springboot.mapper">
+
+    <!--resultType返回值类型
+        id 方法名称-->
+    <select id="findAll" resultType="com.nanfang.gradle_springboot.pojo.User">
+      select * from tb_user
+    </select>
+</mapper>
